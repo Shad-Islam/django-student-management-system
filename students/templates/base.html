@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <nav class="bg-gray-800 p-4">
+      <div class="flex justify-center h-full">
+        <span class="text-4xl font-poppins text-white tracking-widest">
+          Student Management System
+        </span>
+      </div>
+    </nav>
+    <div class="flex">
+      <aside class="w-1/12 bg-gray-200 p-4 h-screen">
+        <ul>
+          <li class="mb-2">
+            <a href="" class="text-blue-500 hover:underline">Student List</a>
+          </li>
+          <li>
+            <a href="" class="text-blue-500 hover:underline">Add Student</a>
+          </li>
+        </ul>
+      </aside>
+      <main class="w-3/4 p-4">
+        {% block content %} 
+        {% endblock %}
+    </main>
+    </div>
+  </body>
+</html>

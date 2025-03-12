@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import Student
 
 # Create your views here.
-def home(request):
+def student_list(request):
     students = Student.objects.all()
     # print(students)
     # result = ""
@@ -13,4 +13,7 @@ def home(request):
     # return HttpResponse(result)
     
     return render(request, "student_list.html" ,{'students': students})
-    
+
+
+def home(request):
+    return render(request, "base.html")
