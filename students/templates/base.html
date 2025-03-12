@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    {% block head %} 
+    {% endblock %}
+    
   </head>
   <body>
     <nav class="bg-gray-800 p-4">
@@ -15,11 +19,11 @@
     </nav>
     <div class="flex">
       <aside class="w-1/12 bg-gray-200 p-4 h-screen">
-        <ul>
-          <li class="mb-2">
-            <a href="" class="text-blue-500 hover:underline">Student List</a>
+        <ul class="flex flex-col">
+          <li class="mb-2 ">
+            <a href="{% url 'student-list' %}" class="text-blue-500 hover:underline">Student List</a>
           </li>
-          <li>
+          <li class="mb-2 ">
             <a href="" class="text-blue-500 hover:underline">Add Student</a>
           </li>
         </ul>
