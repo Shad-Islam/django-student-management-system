@@ -31,3 +31,10 @@ def add_student(request):
     else:
         form = StudentForm()
     return render(request, "add_student.html",{ 'form': form})
+
+
+
+def  delete_student(request, student_id):
+        student = Student.objects.get(id=student_id)
+        student.delete()
+        return redirect('student_list')
