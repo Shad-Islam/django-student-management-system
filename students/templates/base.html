@@ -21,6 +21,13 @@
         <ul class="flex flex-col sidebar-menu">
           <li class="mb-2 sidebar-item">
             <a
+              href="{% url 'home' %}"
+              class="text-blue-500 hover:underline"
+              >Home</a
+            >
+          </li>
+          <li class="mb-2 sidebar-item">
+            <a
               href="{% url 'student_list' %}"
               class="text-blue-500 hover:underline"
               >Student List</a
@@ -28,7 +35,7 @@
           </li>
           <li class="mb-2 sidebar-item">
             <a
-              href=""
+              href="{% url 'add_student' %}"
               class="text-blue-500 hover:underline"
               >Add Student</a
             >

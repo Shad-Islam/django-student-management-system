@@ -17,3 +17,6 @@ def student_list(request):
 
 def home(request):
     return render(request, "base.html")
+
+def add_student(request):
+    return render(request, "add_student.html")
