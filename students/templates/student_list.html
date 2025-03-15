@@ -1,12 +1,9 @@
 {% extends "base.html" %} 
-
 {% load static %} 
-
 {% block head %}
 <title>Student List</title>
 <link rel="stylesheet" href="{% static 'style.css' %}" />
 {% endblock %} 
-
 {% block content %}
 <h1>Student List</h1>
 <ul class="student-list">
@@ -17,6 +14,11 @@
     City: {{ student.student_city }} <br />
     College Name: {{ student.student_college }} <br />
     Age: {{ student.student_age }} <br />
+    <div class="student-buttons">
+      <a href="" style="background-color: blue;">View</a>
+      <a href="" style="background-color: orange;">Edit</a>
+      <a href="" style="background-color: red;">Delete</a>
+    </div>
   </li>
   {% endfor %}
 </ul>

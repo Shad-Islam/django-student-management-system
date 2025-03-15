@@ -10,11 +10,27 @@ h1{
     padding: 0;
     overflow: hidden;
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
 }
 
 .student{
-    padding: 20px;
+    padding: 25px;
+    margin: 10px;
     box-shadow: 2px 2px 5px grey;
+}
+
+.student-buttons{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.student-buttons a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
