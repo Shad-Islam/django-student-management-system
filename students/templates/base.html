@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
-    {% block head %} 
-    {% endblock %}
-    
+    {% block head %}
+     {% endblock %}
   </head>
   <body>
     <nav class="bg-gray-800 p-4">
@@ -19,19 +18,27 @@
     </nav>
     <div class="flex">
       <aside class="w-1/12 bg-gray-200 p-4 h-screen">
-        <ul class="flex flex-col">
-          <li class="mb-2 ">
-            <a href="{% url 'student-list' %}" class="text-blue-500 hover:underline">Student List</a>
+        <ul class="flex flex-col sidebar-menu">
+          <li class="mb-2 sidebar-item">
+            <a
+              href="{% url 'student_list' %}"
+              class="text-blue-500 hover:underline"
+              >Student List</a
+            >
           </li>
-          <li class="mb-2 ">
-            <a href="" class="text-blue-500 hover:underline">Add Student</a>
+          <li class="mb-2 sidebar-item">
+            <a
+              href=""
+              class="text-blue-500 hover:underline"
+              >Add Student</a
+            >
           </li>
         </ul>
       </aside>
       <main class="w-3/4 p-4">
-        {% block content %} 
-        {% endblock %}
-    </main>
+        {% block content %}
+         {% endblock %}
+        </main>
     </div>
   </body>
 </html>
