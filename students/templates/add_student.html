@@ -1,10 +1,11 @@
-{% extends "base.html" %} 
-{% load static %} 
-{% block head %}
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'add_student.css' %}" />
-    {% endblock %} 
-
-{% block content %}
-    <h1>add student</h1>
-{% endblock %}
+{% extends "base.html" %} {% load static %} {% block head %}
+<title>Add Student</title>
+<link rel="stylesheet" href="{% static 'add_student.css' %}" />
+{% endblock %} {% block content %}
+<h1>Add Student</h1>
+<form action="{% url 'add_student' %}" method="POST">
+  {% csrf_token %} 
+  {{form}}
+  <button type="submit">Add Student</button>
+  {% endblock %}
+</form>

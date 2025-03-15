@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render,redirect
 from .models import Student
+from .forms import StudentForm
+
 
 # Create your views here.
 def student_list(request):
@@ -19,4 +20,14 @@ def home(request):
     return render(request, "base.html")
 
 def add_student(request):
-    return render(request, "add_student.html")
+    if request.method == "POST":
+        form = StudentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('add_student')
+        return render(request, "add_student.html",{'form': form})
+            
+    
+    else:
+        form = StudentForm()
+    return render(request, "add_student.html",{ 'form': form})
