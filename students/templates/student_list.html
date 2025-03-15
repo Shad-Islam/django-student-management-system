@@ -15,7 +15,7 @@
     Course Name: {{ student.student_course }} <br />
     Age: {{ student.student_age }} <br />
     <div class="student-buttons">
-      <a href="" style="background-color: blue;">View</a>
+      <a href="{% url 'view_student' student.id %}" style="background-color: blue;">View</a>
       <a href="" style="background-color: orange;">Edit</a>
       <a href="{% url 'delete_student' student.id %}" style="background-color: red;">Delete</a>
     </div>

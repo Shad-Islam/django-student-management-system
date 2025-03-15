@@ -9,3 +9,6 @@ class Student(models.Model):
     student_course = models.CharField(max_length=100)
     student_age = models.IntegerField()
     
+    def get_fields(self):
+        return [(field.verbose_name, getattr(self, field.name)) for field in self._meta.fields]
+    

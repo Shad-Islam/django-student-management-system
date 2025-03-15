@@ -38,3 +38,7 @@ def  delete_student(request, student_id):
         student = Student.objects.get(id=student_id)
         student.delete()
         return redirect('student_list')
+
+def view_student(request, student_id):
+    student = Student.objects.get(id = student_id)
+    return render(request,"view_student.html",{'student': student})

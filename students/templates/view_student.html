@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<title>View Student </title>
+<link rel="stylesheet" href="{% static 'view_student.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<h1>View Student Details</h1>
+<div class="student-view">
+    {% for field, value in student.get_fields %}
+    <p><strong>{{ field }}:</strong> {{ value }}</p>
+    {% endfor %}
+</div>
+{% endblock %}
