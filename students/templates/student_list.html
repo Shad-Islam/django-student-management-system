@@ -6,6 +6,7 @@
 {% endblock %} 
 {% block content %}
 <h1>Student List</h1>
+
 <ul class="student-list">
   {% for student in students %}
   <li class="student">
@@ -16,7 +17,7 @@
     Age: {{ student.student_age }} <br />
     <div class="student-buttons">
       <a href="{% url 'view_student' student.id %}" style="background-color: blue;">View</a>
-      <a href="" style="background-color: orange;">Edit</a>
+      <a href="{% url 'edit_student' student.id %}" style="background-color: orange;">Edit</a>
       <a href="{% url 'delete_student' student.id %}" style="background-color: red;">Delete</a>
     </div>
   </li>

@@ -43,6 +43,13 @@
         </ul>
       </aside>
       <main class="w-3/4 p-4">
+        {% if messages %}
+  <ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
         {% block content %}
          {% endblock %}
         </main>
