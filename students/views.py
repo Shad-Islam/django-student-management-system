@@ -18,7 +18,9 @@ def student_list(request):
 
 
 def home(request):
-    return render(request, "base.html")
+    greeting_text = "Welcome to the Student Management System!"
+    return render(request, "base.html", {'greeting_text': greeting_text})
+
 
 def add_student(request):
     if request.method == "POST":

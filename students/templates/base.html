@@ -6,6 +6,7 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     {% block head %} 
     {% endblock %}
+    <title> Student Management System</title>
   </head>
   <body class="flex flex-col min-h-screen">
     <nav class="bg-gray-800 p-4">
@@ -47,6 +48,11 @@
                 {{ message }}
               </div>
             {% endfor %}
+          </div>
+        {% endif %}
+        {% if greeting_text %}
+          <div class="mb-4 p-4 bg-blue-100 text-blue-700 rounded-lg">
+            {{ greeting_text }}
           </div>
         {% endif %}
         {% block content %} 
